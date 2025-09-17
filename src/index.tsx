@@ -77,7 +77,7 @@ const dialogVariants: Variants = {
   },
 };
 
-function App() {
+function App2() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -146,7 +146,7 @@ function App() {
           </button>
           {/* Botão de adicionar na versão mobile */}
           <button
-            className='w-10 h-10 flex md:hidden justify-center items-center fixed bottom-16 right-6 cursor-pointer 
+            className='w-10 h-10 flex md:hidden justify-center items-center fixed bottom-10 right-7 cursor-pointer 
             bg-green-500 text-white rounded-full p-2 z-10 animate-pulse'
             onClick={() => handleOpenModal(null)}
           >
@@ -251,12 +251,10 @@ function App() {
                   />
                 </DialogContent>
                 <DialogActions className='w-[93%] mx-auto mb-3'>
-                  <button onClick={handleSave} className='flex-1 py-2 rounded-sm px-3 border-1 border-green-500 hover:bg-green-500 
-                    transition hover:text-white cursor-pointer'>
+                  <button onClick={handleSave} className='flex-1 py-2 rounded-sm px-3 border-1 border-green-500 hover:bg-green-500 transition hover:text-white cursor-pointer'>
                     {produtoEdicao ? 'Salvar' : 'Adicionar'}
                   </button>
-                  <button onClick={handleCloseModal} className='flex-1 py-2 rounded-sm px-3 border-1 border-red-500 hover:bg-red-400 
-                    transition hover:text-white cursor-pointer'> Cancelar </button>
+                  <button onClick={handleCloseModal} className='flex-1 py-2 rounded-sm px-3 border-1 border-red-500 hover:bg-red-400 transition hover:text-white cursor-pointer'> Cancelar </button>
                 </DialogActions>
               </Dialog>
             </motion.div>
@@ -267,4 +265,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
