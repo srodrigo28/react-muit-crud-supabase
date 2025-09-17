@@ -23,7 +23,6 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import ModeEditOutlinedIcon from '@mui/icons-material/ModeEditOutlined';
-import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 
 type Produto = {
   nome: string;
@@ -137,17 +136,18 @@ function App() {
           <h1>Lista de Produtos</h1>
           {/* Botão de adicionar na versão desktop */}
           <button
-            className='w-7 h-7 hidden md:flex justify-center items-center cursor-pointer bg-green-500 text-white rounded-full p-2'
+            className='w-7 h-7 hidden md:flex justify-center items-center cursor-pointer bg-green-500
+             text-white rounded-full p-2'
             onClick={() => handleOpenModal(null)}
           >
-            <AddCircleOutlinedIcon />
+            +
           </button>
           {/* Botão de adicionar na versão mobile */}
           <button
             className='w-10 h-10 flex md:hidden justify-center items-center fixed bottom-10 right-7 cursor-pointer bg-green-500 text-white rounded-full p-2 z-10'
             onClick={() => handleOpenModal(null)}
           >
-            <AddCircleOutlinedIcon />
+            +
           </button>
         </Typography>
 
