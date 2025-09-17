@@ -133,7 +133,7 @@ function App() {
     <div className='md:px-20 md:mt-10'>
       <Box p={2}>
         <Typography variant="h5" gutterBottom className='flex justify-between'>
-          <h1>Lista de Produtos</h1>
+          <h1 className='text-center mx-auto mt-0 md:mx-0'>Lista de Produtos</h1>
           {/* Botão de adicionar na versão desktop */}
           <button
             className='w-7 h-7 hidden md:flex justify-center items-center cursor-pointer bg-green-500
@@ -151,7 +151,7 @@ function App() {
           </button>
         </Typography>
 
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className='h-[80svh] overflow-y-auto'>
           <Table size={isMobile ? 'small' : 'medium'}>
             <TableHead className='bg-green-500'>
               <TableRow>
@@ -205,6 +205,9 @@ function App() {
               </AnimatePresence>
             </TableBody>
           </Table>
+              <p className='bg-green-100 w-full h-12 fixed bottom-9 max-w-[87%] mx-auto ml-1 rounded-b-md'>
+                <strong className='text-green-800 ml-3 flex justify-between items-center'><h3>Total de Produtos:</h3> <div className='h-10 w-10 mt-1 mr-2 text-white flex items-center bg-green-500 justify-center rounded-full'>{rows.length}</div></strong>
+              </p>
         </TableContainer>
 
         <AnimatePresence>
