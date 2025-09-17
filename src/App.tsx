@@ -155,8 +155,8 @@ function App() {
           <Table size={isMobile ? 'small' : 'medium'}>
             <TableHead>
               <TableRow>
-                <TableCell><strong>Nome do Produto</strong></TableCell>
-                <TableCell align="right" className='hidden md:block'><strong>Preço</strong></TableCell>
+                <TableCell className='w-full'><strong>Nome do Produto</strong></TableCell>
+                <TableCell className='min-w-28' align="center" ><strong>Preço</strong></TableCell>
                 <TableCell align="right"><strong>Ações</strong></TableCell>
               </TableRow>
             </TableHead>
@@ -168,13 +168,14 @@ function App() {
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
+                    className='w-full'
                     variants={rowVariants}
                     transition={{ delay: index * 0.1 }}
                   >
                     <TableCell component="th" scope="row">
                       {row.nome}
                     </TableCell>
-                    <TableCell align="right" className='hidden md:block'>R$ {row.valor.toFixed(2)}</TableCell>
+                    <TableCell align="right" className='min-w-28 '>R$ {row.valor.toFixed(2)}</TableCell>
                     <TableCell align="right">
                       <MotionIconButton
                         variants={iconButtonVariants}
@@ -223,6 +224,7 @@ function App() {
                     onChange={handleChange('nome')}
                     fullWidth
                     margin="normal"
+                    className='w-full'
                     error={erroNome}
                     helperText={erroNome ? 'Por favor, preencha o nome do produto' : ''}
                   />
