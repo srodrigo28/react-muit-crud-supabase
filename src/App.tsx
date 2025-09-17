@@ -153,11 +153,11 @@ function App() {
 
         <TableContainer component={Paper}>
           <Table size={isMobile ? 'small' : 'medium'}>
-            <TableHead>
+            <TableHead className='bg-green-500'>
               <TableRow>
                 <TableCell className='w-full'><strong>Nome do Produto</strong></TableCell>
                 <TableCell className='min-w-28' align="center" ><strong>Preço</strong></TableCell>
-                <TableCell align="right"><strong>Ações</strong></TableCell>
+                <TableCell className='min-w-28' align="center"><strong>Ações</strong></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -216,7 +216,7 @@ function App() {
               variants={dialogVariants}
             >
               <Dialog open={openModal} onClose={handleCloseModal}>
-                <DialogTitle>{produtoEdicao ? 'Editar Produto' : 'Adicionar Produto'}</DialogTitle>
+                <DialogTitle className='bg-green-500'>{produtoEdicao ? 'Editar Produto' : 'Adicionar Produto'}</DialogTitle>
                 <DialogContent>
                   <TextField
                     label="Nome"
